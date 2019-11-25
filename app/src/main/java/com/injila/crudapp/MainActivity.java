@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.nio.Buffer;
+
 public class MainActivity extends AppCompatActivity {
 
 //    declare objects
@@ -95,12 +97,11 @@ public class MainActivity extends AppCompatActivity {
                     buffer.append("\n");
                     buffer.append("Your email is : " + cursor.getString(3));
                     buffer.append("\n");
-                    Buffer data = buffer;
+
                 }
 //                Show the records on a buffer
 //                message_two("ALL RECORDS", buffer.toString());
-                Intent go = new Intent(MainActivity.this,ViewActivity.class);
-                go.putExtra("data", data);
+
             }
         });
         btnDelete.setOnClickListener(new View.OnClickListener() {
